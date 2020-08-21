@@ -1,0 +1,140 @@
+/* Erasing default button styles */
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: opacity 250ms ease-in-out,
+              transform 90ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover{
+    opacity: 0.4;
+}
+
+button:focus {
+    outline: 1px solid #blue;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+#main-content{
+  margin-top:50px;
+}
+
+/* Modal Styles */
+
+.modal{
+  text-align:center;
+}
+
+.modal-header{
+  border:none;
+  padding:.5rem 1rem 0;
+}
+
+.modal-body{
+  padding:.5rem;
+}
+
+.modal-body img{
+  width:100%;
+}
+
+/* Typography */
+
+h1{
+  padding: 300px 0 40px;
+  color:#ffffff;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+/* Navigation */
+
+.navbar{
+  background-color:none;
+  padding-top:20px;
+}
+
+#navbarNav{
+  color: #ffffff;
+}
+
+.navbar-toggler-icon{
+  width: 1em;
+  height: 1em;
+}
+
+.nav-logo{
+  width:8rem;
+}
+
+.active{
+  font-weight:bold;
+}
+
+/* Styles for Show Layout */
+.show-info{
+  margin-bottom:1rem;
+}
+
+.show-date{
+  font-weight:bold;
+}
+
+#show-history-header{
+  background-image: url('../img/band-photos/live-1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.icon{
+  width:20px;
+  height:20px;
+}
+
+/* SVG logo styles & animation */
+
+svg{
+  width:100%;
+  height:100%;
+}
+
+.squiggle{
+  stroke: white;
+  fill: none;
+  stroke-width: 13;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  stroke-linecap: round;
+  animation: draw 18s linear forwards;
+}
+
+.squiggle-o{
+  stroke: black;
+  fill: none;
+  stroke-width: 16;
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 5000;
+  stroke-linecap: round;
+  animation: draw 10s linear forwards;
+}
+
+#w {
+}
+
+#o {
+  animation-delay:12s;
+}
+
+@keyframes draw{
+  to {
+    stroke-dashoffset:0;
+  }
+}
