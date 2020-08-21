@@ -138,3 +138,38 @@ svg{
     stroke-dashoffset:0;
   }
 }
+
+.background-video{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#demo{
+  color:white;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: relative;
+  bottom: 0;
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.video-text {
+  font-family: 'Source Code Pro', monospace;
+  font-size:1.5em;
+}
