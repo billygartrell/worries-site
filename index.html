@@ -73,15 +73,15 @@
     <script>
 
       var i = 0;
-      var txt = 'whose morning is the morning? \n \n someday you might know -' +
-                'someday you might know -' +
-                'whose daylight is meant to stream' +
-                'across your floor,' +
-                'or through the blinds -' +
-                'across the walls.' +
+      var txt = `whose morning is the morning?
+                 someday you might know -
+                 whose daylight is meant to stream
+                 across your floor,
+                 or through the blinds -
+                 across the walls.
 
-                'someday we might know,' +
-                'where morning is the morning.';
+                 someday we might know,
+                 where morning is the morning.`;
 
       var speed = 70; /* The speed/duration of the effect in milliseconds */
 
@@ -93,11 +93,16 @@
       function typeWriter() {
         if (i < txt.length) {
           document.getElementById("demo").innerHTML += txt.charAt(i);
+
+          if (txt.charAt(i) === '\n') {
+            document.getElementById("demo").innerHTML += "<br>";
+          }
+
           i++;
           setTimeout(typeWriter, speed);
         }
       }
-      
+
     </script>
 
   </body>
