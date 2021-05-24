@@ -118,7 +118,7 @@
 
     <!-- Dynamically Populating Modal Information -->
     <script>
-    $('#flyer-modal').on('shown.bs.modal', function (e) {
+    $('#flyer-modal').on('show.bs.modal', function (e) {
       let relatedShow = e.relatedTarget;
       //Replace Modal Date
       let relatedShowDate = $(relatedShow).parents(".show-info").children(".show-date").text();
@@ -127,6 +127,10 @@
       let relatedShowImage = $(relatedShow).parents(".show-info").children(".show-image-url").text();
       let relatedShowImageClean = relatedShowImage.trim();
       $("#modal-image").attr("src", relatedShowImageClean);
+    })
+    $("#flyer-modal").on("hidden.bs.modal", function (e) {
+      $("#flyer-date").html("");
+      $("#modal-image").attr("src", "");
     })
     </script>
 
